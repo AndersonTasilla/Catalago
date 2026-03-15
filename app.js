@@ -3,128 +3,116 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 actualizarCarrito();
 
 function agregarCarrito(nombre, soles, dolares) {
+  carrito.push({ nombre, soles, dolares });
 
-    carrito.push({ nombre, soles, dolares });
+  guardar();
 
-    guardar();
+  mostrarToast(nombre + " agregado");
 
-    mostrarToast(nombre + " agregado");
-
-    actualizarCarrito();
-
+  actualizarCarrito();
 }
 
 function eliminar(index) {
+  carrito.splice(index, 1);
 
-    carrito.splice(index, 1);
+  guardar();
 
-    guardar();
-
-    actualizarCarrito();
-
+  actualizarCarrito();
 }
 
 function guardar() {
-
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
 function actualizarCarrito() {
+  let lista = document.getElementById("listaCarrito");
+  let contador = document.getElementById("contador");
+  let total = document.getElementById("total");
 
-    let lista = document.getElementById("listaCarrito");
-    let contador = document.getElementById("contador");
-    let total = document.getElementById("total");
+  if (!lista) return;
 
-    if (!lista) return;
+  lista.innerHTML = "";
 
-    lista.innerHTML = "";
+  let totalSoles = 0;
+  let totalDolares = 0;
 
-    let totalSoles = 0;
-    let totalDolares = 0;
+  carrito.forEach((juego, i) => {
+    let div = document.createElement("div");
 
-    carrito.forEach((juego, i) => {
+    div.classList.add("item");
 
-        let div = document.createElement("div");
+    totalSoles += juego.soles;
+    totalDolares += juego.dolares;
 
-        div.classList.add("item");
+    div.innerHTML = ` ${juego.nombre} S/${juego.soles} | $${juego.dolares}<button class="eliminar" onclick="eliminar(${i})">X</button>`;
 
-        totalSoles += juego.soles;
-        totalDolares += juego.dolares;
+    lista.appendChild(div);
+  });
 
-        div.innerHTML = `
-${juego.nombre} 
-S/${juego.soles} | $${juego.dolares}
-<button class="eliminar" onclick="eliminar(${i})">X</button>
-`;
+  contador.innerText = carrito.length;
 
-        lista.appendChild(div);
-
-    });
-
-    contador.innerText = carrito.length;
-
-    total.innerHTML = `
+  total.innerHTML = `
 Total Soles: S/. ${totalSoles} <br>
 Total Dolares: $. ${totalDolares}
 `;
-
 }
 
 function abrirCarrito() {
-
-    document.getElementById("modal").style.display = "flex";
-
+  document.getElementById("modal").style.display = "flex";
 }
 
 function cerrarCarrito() {
-
-    document.getElementById("modal").style.display = "none";
-
+  document.getElementById("modal").style.display = "none";
 }
 
 function comprarWhatsApp() {
+  let mensaje = "Hola quiero comprar:%0A";
 
-    let mensaje = "Hola quiero comprar:%0A";
+  let totalSoles = 0;
+  let totalDolares = 0;
 
-    carrito.forEach(j => {
+  carrito.forEach((j) => {
+    mensaje += `- ${j.nombre} S/${j.soles} | $${j.dolares}%0A`;
+    totalSoles += j.soles;
+    totalDolares += j.dolares;
+  });
 
-        mensaje += `- ${j.nombre} S/${j.soles} | $${j.dolares}%0A`;
+  mensaje += `%0ATotal Soles: S/. ${totalSoles}%0ATotal Dólares: $${totalDolares}`;
 
-    });
-
-    window.open(`https://wa.me/51903558624?text=${mensaje}`);
-
+  window.open(`https://wa.me/51903558624?text=${mensaje}`);
 }
 
 function buscarJuego() {
+  let input = document.getElementById("buscarJuego").value.toLowerCase();
 
-    let input = document.getElementById("buscarJuego").value.toLowerCase();
+  let juegos = document.querySelectorAll(".juego");
 
-    let juegos = document.querySelectorAll(".juego");
+  juegos.forEach((j) => {
+    let nombre = j.querySelector("h3").textContent.toLowerCase();
 
-    juegos.forEach(j => {
-
-        let nombre = j.querySelector("h3").textContent.toLowerCase();
-
-        j.style.display = nombre.includes(input) ? "" : "none";
-
-    });
-
+    if (nombre.includes(input)) {
+      j.style.display = "block"; // se muestra
+      j.style.margin = "0 auto"; // centrado horizontal
+    } else {
+      j.style.display = "none"; // se oculta
+    }
+  });
 }
 
 function mostrarToast(texto) {
+  let toast = document.getElementById("toast");
 
-    let toast = document.getElementById("toast");
+  toast.innerText = texto;
 
-    toast.innerText = texto;
+  toast.classList.add("show");
 
-    toast.classList.add("show");
-
-    setTimeout(() => {
-
-        toast.classList.remove("show");
-
-    }, 2000);
-
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2000);
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("buscarJuego").addEventListener("input", buscarJuego);
+});
+

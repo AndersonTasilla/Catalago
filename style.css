@@ -39,33 +39,47 @@ header {
     font-size: 28px;
 }
 
-/* buscador */
+/* barra superior */
 
-.buscador {
+.top-bar{
+
     width: 90%;
-    max-width: 800px;
+    max-width: 1000px;
+
     margin: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
     position: sticky;
     top: 20px;
     z-index: 1000;
+
+}
+
+/* buscador */
+
+.buscador {
+
+    flex: 1;                /* ocupa todo el espacio disponible */
     background: rgba(15, 32, 39, 0.3);
     backdrop-filter: blur(10px);
     padding: 10px;
     border-radius: 20px;
+
 }
 
 .buscador input {
 
     width: 100%;
-    padding: 14px;
+    padding: 12px;
 
     border-radius: 30px;
     border: none;
 
     background: rgba(255, 255, 255, 0.1);
     color: white;
-
-    backdrop-filter: blur(10px);
 
 }
 
@@ -97,7 +111,6 @@ header {
     transition: 0.3s;
     max-width: 260px;
     position: relative;
-    transition: 0.3s;
 }
 
 .juego:hover {
@@ -194,21 +207,14 @@ header {
 
 .carrito-btn {
 
-    position: fixed;
-
-    top: 20px;
-    right: 20px;
-
+    flex: 0 0 auto;
     background: linear-gradient(90deg, #00c6ff, #0072ff);
-
-    padding: 12px 18px;
-
+    padding: 12px 20px;
     border-radius: 30px;
-
     cursor: pointer;
-
-    font-weight: bold;
-
+    max-width: 250px;
+    white-space: nowrap;
+    text-align: center;
     transition: 0.3s;
 
 }
@@ -364,5 +370,112 @@ header {
 #toast.show {
 
     opacity: 1;
+
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+
+/* laptops pequeñas */
+@media (max-width: 1200px) {
+
+    .catalogo {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+    }
+
+    .juego img {
+        height: 360px;
+    }
+
+}
+
+/* tablets */
+@media (max-width: 900px) {
+
+    header {
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .top-bar {
+        width: 95%;
+    }
+
+    .catalogo {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .juego img {
+        height: 320px;
+    }
+
+}
+
+/* celulares */
+@media (max-width: 700px) {
+
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .carrito-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .catalogo {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .juego {
+        max-width: 100%;
+    }
+
+    .juego img {
+        height: 280px;
+    }
+
+    .carrito {
+        width: 90%;
+    }
+
+}
+
+/* celulares pequeños */
+@media (max-width: 480px) {
+
+    header {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    .juego img {
+        height: 550px;
+    }
+
+    .buscador input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* igualamos ancho del carrito al de la barra superior */
+    .carrito {
+        width: 90%; /* mismo ancho que .top-bar */
+        max-width: none; /* eliminamos límite de 350px */
+        padding: 20px;
+    }
+
+    .item {
+        font-size: 14px;
+    }
 
 }

@@ -19,17 +19,14 @@
       <h1>🎮 Catálogo de Juegos 🎮</h1>
     </header>
 
-    <div class="carrito-btn" onclick="abrirCarrito()">
-      🛒 <span id="contador">0</span>
-    </div>
+    <div class="top-bar">
+      <div class="buscador">
+        <input type="text" id="buscarJuego" placeholder="🔎 Buscar juego..." />
+      </div>
 
-    <div class="buscador">
-      <input
-        type="text"
-        id="buscarJuego"
-        placeholder="🔎 Buscar juego..."
-        onkeyup="buscarJuego()"
-      />
+      <div class="carrito-btn" onclick="abrirCarrito()">
+        🛒 <span id="contador">0</span>
+      </div>
     </div>
 
     <div class="catalogo">
