@@ -1,0 +1,1519 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Catálogo de Juegos</title>
+
+    <link rel="icon" href="img/styanaxLogo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>🎮 Catálogo de Juegos 🎮</h1>
+    </header>
+
+    <div class="carrito-btn" onclick="abrirCarrito()">
+      🛒 <span id="contador">0</span>
+    </div>
+
+    <div class="buscador">
+      <input
+        type="text"
+        id="buscarJuego"
+        placeholder="🔎 Buscar juego..."
+        onkeyup="buscarJuego()"
+      />
+    </div>
+
+    <div class="catalogo">
+      <div class="juego">
+        <!-- <span class="descuento">-50%</span> -->
+        <img src="img/Absolum.png" />
+
+        <h3>Absolum</h3>
+
+        <button class="precio" onclick="agregarCarrito('Absolum', 30, 8)">
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <!-- <span class="descuento">-70%</span> -->
+
+        <img src="img/Ancestors The Humankind Odyssey.png" />
+
+        <h3>Ancestors</h3>
+
+        <button class="precio" onclick="agregarCarrito('Ancestors', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/B4D.png" />
+
+        <h3>Back 4 Blood</h3>
+
+        <button class="precio" onclick="agregarCarrito('Back 4 Blood', 10, 3)">
+          Agregar S/10 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Bad parenting.jpg" />
+
+        <h3>Bad parenting</h3>
+
+        <button class="precio" onclick="agregarCarrito('Bad parenting', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Biped.png" />
+
+        <h3>Biped</h3>
+
+        <button class="precio" onclick="agregarCarrito('Biped', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Biped 2.png" />
+
+        <h3>Biped 2</h3>
+
+        <button class="precio" onclick="agregarCarrito('Biped 2', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Bokura.png" />
+
+        <h3>Bokura</h3>
+
+        <button class="precio" onclick="agregarCarrito('Bokura', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Bō Path of the Teal Lotus.png" />
+
+        <h3>Bō Path of the Teal Lotus</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Bō Path of the Teal Lotus', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Celeste.png" />
+
+        <h3>Celeste</h3>
+
+        <button class="precio" onclick="agregarCarrito('Celeste', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Cyberpunk 2077.png" />
+
+        <h3>Cyberpunk 2077</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Cyberpunk 2077', 30, 9)"
+        >
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Clair Obscur Expedition 33.png" />
+
+        <h3>Clair Obscur Expedition 33</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Clair Obscur Expedition 33', 8, 2)"
+        >
+          Agregar S/8 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Cuphead.png" />
+
+        <h3>Cuphead</h3>
+
+        <button class="precio" onclick="agregarCarrito('Cuphead', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Dragon Ball Z Kakarot.png" />
+
+        <h3>Dragon Ball Z Kakarot</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Dragon Ball Z Kakarot', 20, 6)"
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/DARK SOULS™ REMASTERED.png" />
+
+        <h3>DARK SOULS™ REMASTERED</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('DARK SOULS™ REMASTERED', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/DARK SOULS™ 2.png" />
+
+        <h3>DARK SOULS™ II</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('DARK SOULS™ REMASTERED', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/DARK SOULS™ 3.png" />
+
+        <h3>DARK SOULS™ III</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('DARK SOULS™ REMASTERED', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Daysgone.png" />
+
+        <h3>Daysgone</h3>
+
+        <button class="precio" onclick="agregarCarrito('Daysgone', 30, 9)">
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Devil May Cry 5.png" />
+
+        <h3>Devil May Cry 5</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Devil May Cry 5', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Devil May Cry 4 Special Edition.png" />
+
+        <h3>Devil May Cry 4 Special Edition</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Devil May Cry 4 Special Edition', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Devil May Cry HD Collection.png" />
+
+        <h3>Devil May Cry HD Collection</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Devil May Cry HD Collection', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Dispatch.png" />
+
+        <h3>Dispatch</h3>
+
+        <button class="precio" onclick="agregarCarrito('Dispatch', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/DRAGON BALL Sparking! ZERO.png" />
+
+        <h3>DRAGON BALL Sparking! ZERO</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('DRAGON BALL Sparking! ZERO', 20, 6)"
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/DREDGE.png" />
+
+        <h3>DREDGE</h3>
+
+        <button class="precio" onclick="agregarCarrito('DREDGE', 10, 3)">
+          Agregar S/10 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/ELDEN RING.png" />
+
+        <h3>ELDEN RING</h3>
+
+        <button class="precio" onclick="agregarCarrito('ELDEN RING', 20, 6)">
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Europa Universalis V.png" />
+
+        <h3>Europa Universalis V</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Europa Universalis V', 20, 6)"
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Fallout (1997).png" />
+
+        <h3>Fallout (1997)</h3>
+
+        <button class="precio" onclick="agregarCarrito('Fallout (1997)', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Fallout 2.png" />
+
+        <h3>Fallout 2</h3>
+
+        <button class="precio" onclick="agregarCarrito('Fallout 2', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Fallout 3.png" />
+
+        <h3>Fallout 3</h3>
+
+        <button class="precio" onclick="agregarCarrito('Fallout 3', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Fallout 4.png" />
+
+        <h3>Fallout 4</h3>
+
+        <button class="precio" onclick="agregarCarrito('Fallout 4', 10, 3)">
+          Agregar S/10 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Fallout New Vegas.png" />
+
+        <h3>Fallout New Vegas</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Fallout New Vegas', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Five Night at Freddy_s.png" />
+
+        <h3>Five Night at Freddy_s</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Five Night at Freddy_s', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Five Night at Freddy_s 2.png" />
+
+        <h3>Five Night at Freddy_s 2</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Five Night at Freddy_s 2', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Five Night at Freddy_s 3.png" />
+
+        <h3>Five Night at Freddy_s 3</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Five Night at Freddy_s 3', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Five Night at Freddy_s 4.png" />
+
+        <h3>Five Night at Freddy_s 4</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Five Night at Freddy_s 4', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Five Night at Freddy_s Sister location.png" />
+
+        <h3>Five Night at Freddy_s Sister location</h3>
+
+        <button
+          class="precio"
+          onclick="
+            agregarCarrito('Five Night at Freddy_s Sister location', 5, 2)
+          "
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Five Nights at Freddy_s Help Wanted 1.png" />
+
+        <h3>Five Nights at Freddy_s Help Wanted</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Five Nights at Freddy_s Help Wanted', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Five Nights at Freddy_s Help Wanted 2.png" />
+
+        <h3>Five Nights at Freddy_s Help Wanted 2</h3>
+
+        <button
+          class="precio"
+          onclick="
+            agregarCarrito('Five Nights at Freddy_s Help Wanted 2', 20, 6)
+          "
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Five Nights at Freddy_s Into the Pit.png" />
+
+        <h3>Five Nights at Freddy_s Into the Pit</h3>
+
+        <button
+          class="precio"
+          onclick="
+            agregarCarrito('Five Nights at Freddy_s Into the Pit', 15, 5)
+          "
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Five Nights at Freddy_s Secret of the Mimic.png" />
+
+        <h3>Five Nights at Freddy_s Secret of the Mimic</h3>
+
+        <button
+          class="precio"
+          onclick="
+            agregarCarrito('Five Nights at Freddy_s Secret of the Mimic', 20, 6)
+          "
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Gang Beasts.png" />
+
+        <h3>Gang Beasts</h3>
+
+        <button class="precio" onclick="agregarCarrito('Gang Beasts', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/GTA III.png" />
+
+        <h3>GTA III</h3>
+
+        <button class="precio" onclick="agregarCarrito('GTA III', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/GTA San Andreas.png" />
+
+        <h3>GTA San Andreas</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('GTA San Andreas', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/GTA Vice City.png" />
+
+        <h3>GTA Vice City</h3>
+
+        <button class="precio" onclick="agregarCarrito('GTA Vice City', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Ghost of Tsushima DIRECTOR_S CUT.png" />
+
+        <h3>Ghost of Tsushima</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Ghost of Tsushima', 30, 9)"
+        >
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/God Of War.png" />
+
+        <h3>God Of War</h3>
+
+        <button class="precio" onclick="agregarCarrito('God Of War', 30, 9)">
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/God Of War Ragnarok.png" />
+
+        <h3>God Of War Ragnarok</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('God Of War Ragnarok', 30, 9)"
+        >
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Hades.png" />
+
+        <h3>Hades</h3>
+
+        <button class="precio" onclick="agregarCarrito('Hades', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Hades II.png" />
+
+        <h3>Hades II</h3>
+
+        <button class="precio" onclick="agregarCarrito('Hades II', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Hi-Fi RUSH.png" />
+
+        <h3>Hi-Fi RUSH</h3>
+
+        <button class="precio" onclick="agregarCarrito('Hi-Fi RUSH', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Hollow Knigth.png" />
+
+        <h3>Hollow Knigth</h3>
+
+        <button class="precio" onclick="agregarCarrito('Hollow Knigth', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Hollow Knigth Silksong.png" />
+
+        <h3>Hollow Knigth Silksong</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Hollow Knigth Silksong', 8, 3)"
+        >
+          Agregar S/8 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Kingdom Come Deliverance.png" />
+
+        <h3>Kingdom Come Deliverance</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Kingdom Come Deliverance', 20, 6)"
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Kingdom Come Deliverance II.png" />
+
+        <h3>Kingdom Come Deliverance II</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Kingdom Come Deliverance II', 20, 6)"
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Kitty Powers_ Matchmaker.png" />
+
+        <h3>Kitty Powers_ Matchmaker</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Kitty Powers_ Matchmaker', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Hello Neighbor.png" />
+
+        <h3>Hello Neighbor</h3>
+
+        <button class="precio" onclick="agregarCarrito('Hello Neighbor', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Hello Neighbor 2.jpg" />
+
+        <h3>Hello Neighbor 2</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Hello Neighbor 2', 10, 3)"
+        >
+          Agregar S/10 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/LEGO® Harry Potter™ Collection.png" />
+
+        <h3>LEGO® Harry Potter™ Collection</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('LEGO® Harry Potter™ Collection', 8, 3)"
+        >
+          Agregar S/8 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/LEGO® Jurassic World.png" />
+
+        <h3>LEGO® Jurassic World</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('LEGO® Jurassic World', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/LEGO® MARVEL Super Heroes.png" />
+
+        <h3>LEGO® MARVEL Super Heroes</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('LEGO® MARVEL Super Heroes', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/LEGO® NINJAGO® Movie Video Game.png" />
+
+        <h3>LEGO® NINJAGO® Movie Video Game</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('LEGO® NINJAGO® Movie Video Game', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/LEGO® The Lord of the Rings™.png" />
+
+        <h3>LEGO® NINJAGO® Movie Video Game</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('LEGO® NINJAGO® Movie Video Game', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Little Nightmares.png" />
+
+        <h3>Little Nightmares</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Little Nightmares', 8, 3)"
+        >
+          Agregar S/8 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Little Nightmares II.png" />
+
+        <h3>Little Nightmares II</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Little Nightmares II', 8, 3)"
+        >
+          Agregar S/8 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Little Nightmares III.png" />
+
+        <h3>Little Nightmares III</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Little Nightmares III', 8, 3)"
+        >
+          Agregar S/8 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Marvel_s Spider-Man Remastered.png" />
+
+        <h3>Marvel_s Spider-Man Remastered</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Marvel_s Spider-Man Remastered', 30, 9)"
+        >
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Marvel_s Spider-Man 2.png" />
+
+        <h3>Marvel_s Spider-Man 2</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Marvel_s Spider-Man 2', 30, 9)"
+        >
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Marvel_s Spider-Man Miles Morales.png" />
+
+        <h3>Marvel_s Spider-Man Miles Morales</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Marvel_s Spider-Man Miles Morales', 30, 9)"
+        >
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/METAL GEAR SOLID Δ SNAKE EATER.png" />
+
+        <h3>METAL GEAR SOLID Δ SNAKE EATER</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('METAL GEAR SOLID Δ SNAKE EATER', 30, 9)"
+        >
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Minecraft Dungeons.png" />
+
+        <h3>Minecraft Dungeons</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Minecraft Dungeons', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Monster Hunter World.png" />
+
+        <h3>Monster Hunter World</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Monster Hunter World', 20, 6)"
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/MIO Memories in Orbit.png" />
+
+        <h3>MIO Memories in Orbit</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('MIO Memories in Orbit', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Mortal Kombat X.png" />
+
+        <h3>Mortal Kombat X</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Mortal Kombat X', 8, 3)"
+        >
+          Agregar S/8 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Mortal Kombat 11.png" />
+
+        <h3>Mortal Kombat 11</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Mortal Kombat 11', 8, 3)"
+        >
+          Agregar S/8 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Nioh 3.jpg" />
+
+        <h3>Nioh 31</h3>
+
+        <button class="precio" onclick="agregarCarrito('Nioh 3', 30, 9)">
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/NARUTO Ultimate Ninja STORM.png" />
+
+        <h3>NARUTO Ultimate Ninja STORM</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('NARUTO Ultimate Ninja STORM', 20, 6)"
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/NARUTO SHIPPUDEN Ultimate Ninja STORM 2.png" />
+
+        <h3>NARUTO SHIPPUDEN Ultimate Ninja STORM 2</h3>
+
+        <button
+          class="precio"
+          onclick="
+            agregarCarrito('NARUTO SHIPPUDEN Ultimate Ninja STORM 2', 20, 6)
+          "
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img
+          src="img/NARUTO SHIPPUDEN Ultimate Ninja STORM 3 Full Burst HD.png"
+        />
+
+        <h3>NARUTO SHIPPUDEN Ultimate Ninja STORM 3</h3>
+
+        <button
+          class="precio"
+          onclick="
+            agregarCarrito('NARUTO SHIPPUDEN Ultimate Ninja STORM 3', 20, 6)
+          "
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/NARUTO SHIPPUDEN Ultimate Ninja STORM 4.png" />
+
+        <h3>NARUTO SHIPPUDEN Ultimate Ninja STORM 4</h3>
+
+        <button
+          class="precio"
+          onclick="
+            agregarCarrito('NARUTO SHIPPUDEN Ultimate Ninja STORM 4', 20, 6)
+          "
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/NARUTO SHIPPUDEN Ultimate Ninja STORM Revolution.jpg" />
+
+        <h3>NARUTO SHIPPUDEN Ultimate Ninja STORM Revolution</h3>
+
+        <button
+          class="precio"
+          onclick="
+            agregarCarrito(
+              'NARUTO SHIPPUDEN Ultimate Ninja STORM Revolution',
+              20,
+              6,
+            )
+          "
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS.jpg" />
+
+        <h3>NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS</h3>
+
+        <button
+          class="precio"
+          onclick="
+            agregarCarrito(
+              'NARUTO X BORUTO Ultimate Ninja STORM CONNECTIONS',
+              30,
+              9,
+            )
+          "
+        >
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/ONE PIECE PIRATE WARRIORS 4.png" />
+
+        <h3>ONE PIECE PIRATE WARRIORS 4</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('ONE PIECE PIRATE WARRIORS 4', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Ori and the Blind Forest Definitive Edition.png" />
+
+        <h3>Ori and the Blind Forest Definitive Edition</h3>
+
+        <button
+          class="precio"
+          onclick="
+            agregarCarrito('Ori and the Blind Forest Definitive Edition', 5, 2)
+          "
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Ori and the Will of the Wisps.png" />
+
+        <h3>Ori and the Will of the Wisps</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Ori and the Will of the Wisps', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Overcooked.png" />
+
+        <h3>Overcooke!</h3>
+
+        <button class="precio" onclick="agregarCarrito('Overcooke', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Overcooked! 2.png" />
+
+        <h3>Overcooked! 2</h3>
+
+        <button class="precio" onclick="agregarCarrito('Overcooke! 2', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Overcooked! All You Can Eat.png" />
+
+        <h3>Overcooked! All You Can Eat</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Overcooked! All You Can Eat', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/PATAPON 1+2 REPLAY.png" />
+
+        <h3>PATAPON 1+2 REPLAY</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('PATAPON 1+2 REPLAY', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Plants vs. Zombies Trasplantado.png" />
+
+        <h3>Plants vs. Zombies Replanted</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Plants vs. Zombies Replanted', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/PoppyPlayTime.png" />
+
+        <h3>Poppy Play Time</h3>
+
+        <button class="precio" onclick="agregarCarrito('PoppyPlayTime', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Prototype.png" />
+
+        <h3>Prototype</h3>
+
+        <button class="precio" onclick="agregarCarrito('Prototype', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Prototype 2.png" />
+
+        <h3>Prototype 2</h3>
+
+        <button class="precio" onclick="agregarCarrito('Prototype 2', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/REANIMAL.png" />
+
+        <h3>REANIMAL</h3>
+
+        <button class="precio" onclick="agregarCarrito('REANIMAL', 10, 3)">
+          Agregar S/10 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Resident Evil 0.png" />
+
+        <h3>Resident Evil 0</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Resident Evil 0', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Resident Evil 1.png" />
+
+        <h3>Resident Evil 1</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Resident Evil 1', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Resident Evil 2.png" />
+
+        <h3>Resident Evil 2</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Resident Evil 2', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Resident Evil 3.png" />
+
+        <h3>Resident Evil 3</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Resident Evil 3', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Resident Evil 4.png" />
+
+        <h3>Resident Evil 4</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Resident Evil 4', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Resident Evil 5.png" />
+
+        <h3>Resident Evil 5</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Resident Evil 5', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Resident Evil 6.png" />
+
+        <h3>Resident Evil 6</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Resident Evil 6', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Resident Evil 7.jpg" />
+
+        <h3>Resident Evil 7</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Resident Evil 7', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Resident Evil Village.png" />
+
+        <h3>Resident Evil Village</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Resident Evil Village', 15, 5)"
+        >
+          Agregar S/15 | $5
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Sackboy™ A Big Adventure.png" />
+
+        <h3>Sackboy™ A Big Adventure</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Sackboy™ A Big Adventure', 8, 3)"
+        >
+          Agregar S/8 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Sekiro™ Shadows Die Twice.png" />
+
+        <h3>Sekiro Shadows Die Twice</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Sekiro Shadows Die Twice', 20, 6)"
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Shadow of the Tomb Raider_ Definitive Edition.png" />
+
+        <h3>Shadow of the Tomb Raider Definitive Edition</h3>
+
+        <button
+          class="precio"
+          onclick="
+            agregarCarrito(
+              'Shadow of the Tomb Raider Definitive Edition',
+              20,
+              6,
+            )
+          "
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/SILENT HILL 2.png" />
+
+        <h3>SILENT HILL 2</h3>
+
+        <button class="precio" onclick="agregarCarrito('SILENT HILL 2', 30, 9)">
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/SlimeRancher.png" />
+
+        <h3>SlimeRancher</h3>
+
+        <button class="precio" onclick="agregarCarrito('SlimeRancher', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Slime Rancher 2.jpg" />
+
+        <h3>SlimeRancher 2</h3>
+
+        <button class="precio" onclick="agregarCarrito('SlimeRancher 2', 8, 3)">
+          Agregar S/8 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Stardew Valley.jpg" />
+
+        <h3>Stardew Valley</h3>
+
+        <button class="precio" onclick="agregarCarrito('Stardew Valley', 5, 2)">
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Stray.png" />
+
+        <h3>Strayy</h3>
+
+        <button class="precio" onclick="agregarCarrito('Stray', 20, 6)">
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/The last of us 1.png" />
+
+        <h3>The last of us 1</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('The last of us 1', 30, 9)"
+        >
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/The last of us 2 remastered.jpg" />
+
+        <h3>The last of us 2 remastered</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('The last of us 2 remastered', 30, 9)"
+        >
+          Agregar S/30 | $9
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/The Walking Dead_ The Telltale Definitive Series.png" />
+
+        <h3>The Walking Dead The Telltale Definitive Series</h3>
+
+        <button
+          class="precio"
+          onclick="
+            agregarCarrito(
+              'The Walking Dead The Telltale Definitive Series',
+              20,
+              6,
+            )
+          "
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/The Witcher Enhanced Edition.jpg" />
+
+        <h3>The Witcher Enhanced Edition</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('The Witcher Enhanced Edition', 8, 3)"
+        >
+          Agregar S/8 | $3
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/The Witcher 2 Assassins of Kings.png" />
+
+        <h3>The Witcher 2 Assassins of Kings</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('The Witcher 2 Assassins of Kings', 20, 6)"
+        >
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Ultimate Chicken Horse.png" />
+
+        <h3>Ultimate Chicken Horse</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Ultimate Chicken Horse', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Until Dawn.png" />
+
+        <h3>Until Dawn</h3>
+
+        <button class="precio" onclick="agregarCarrito('Until Dawn', 20, 6)">
+          Agregar S/20 | $6
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/Untitled Goose Game.png" />
+
+        <h3>Untitled Goose Game</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('Untitled Goose Game', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+
+      <div class="juego">
+        <img src="img/WorldBox - God Simulator.png" />
+
+        <h3>WorldBox - God Simulator</h3>
+
+        <button
+          class="precio"
+          onclick="agregarCarrito('WorldBox - God Simulator', 5, 2)"
+        >
+          Agregar S/5 | $2
+        </button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="carrito">
+        <h2>🛒 Tu carrito</h2>
+
+        <div id="listaCarrito"></div>
+
+        <div id="total"></div>
+
+        <button class="comprar" onclick="comprarWhatsApp()">
+          Finalizar compra
+        </button>
+
+        <button class="cerrar" onclick="cerrarCarrito()">Cerrar</button>
+      </div>
+    </div>
+
+    <div id="toast"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
